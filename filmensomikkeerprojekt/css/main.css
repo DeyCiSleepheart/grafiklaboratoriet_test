@@ -1,0 +1,354 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0 auto;
+	/*background: url(../img/header_bg.png) no-repeat;*/
+	background: url(../img/bg.jpg) no-repeat;
+	background-size:cover;
+}
+
+@font-face {
+    font-family: 'Moon', 'Montserrat', sans-serif;
+    src: url(../font/moonlight.otf);
+	src: url(../font/moonbold.otf);
+	
+}
+
+.clearfix::after{
+	content:"";
+	display:table;
+	clear:both;	
+}
+/*#headerbaggrund {
+	display:none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: -10;
+}*/
+
+#wrapper {
+	max-width:1280px;
+	margin: 0 auto;
+	
+}
+/*#inner_wrapper {
+	margin: 0 auto;
+	padding: 0 0 0 0;
+}*/
+
+
+img {
+	width: 100%;
+	height:auto;
+}
+
+#plakat {
+	margin:50px 0 0 0;
+}
+#plakat_img {
+	width:100%;
+	
+}
+#plakat_container {
+	width:75%;
+	margin:0 auto;
+	
+}
+
+/*#video_posterframe {
+	width:960px;
+	margin:0 auto;
+}*/
+/*HVORDAN FOR JEG VIDEO FREM*/
+/*#video_posterframe:hover {
+	display:none;
+	
+}*/
+
+#video {
+	width:75%;
+	margin:0 auto;
+}
+video{
+	width:100%;
+}
+/*logoet*/
+#container { 
+
+	margin: 30px auto;
+	width:300px;
+	height:50px;
+}
+
+
+/*#nav_bg {
+	background: rgba(255,255,255,.3);
+	height: 50px;
+	position: fixed;
+	top:0;
+	z-index: -1;
+}
+*/
+.content{
+	width:75%;
+	margin:2em auto;
+}
+h1 {
+	
+	text-align: center;
+	font-family:'Abril Fatface', 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size:102px;
+	font-weight:800;
+	margin: 220px 0 580px;
+	
+}
+h2 {
+	text-align: center;
+	clear:both;
+	padding:0 0 0 0;
+	margin: 30px 0 20px 0;
+	
+	text-transform: uppercase;
+}
+h3 {
+	font-family: 'moonbold', sans-serif;
+	margin: 15px 0;
+}
+
+h4 {
+	margin: 15px 0;
+	color:#fff;
+}
+
+
+aside {
+	position: fixed;
+	top: 20px;
+	left: -100px;
+	z-index: 1;
+}
+
+a {
+	text-decoration: none;
+	color:#000;
+}
+
+nav {
+	width:200px;
+	height:140px;
+	color: #000;
+	font-weight:500;
+	position:absolute;
+	margin:0 0 0 0;
+	top:0;
+	left:20px;
+	background: rgba(255,255,255,.3)
+
+	
+}
+
+ul {
+	margin:0 0 0 100px;
+	list-style-type: none;
+	padding:5px 0 0 0;
+}
+
+li a {
+	width: 180px;
+	float: left;
+	padding:5px 10px;
+	margin: 0 auto;
+	font-size: 18px;
+	transition: all .2s ease-in-out; 
+}
+
+li a img {
+	max-width: 30px;
+	margin: 0 0 0 10px;
+}
+
+nav ul li a:hover {
+	transform: scale(1.3);
+}
+
+/*.pil_op {
+	position:absolute;
+	left:20px;
+}
+
+#videovideo {
+	width:100%;
+}*/
+
+/*video {
+	width:960px;
+	margin:0 auto;
+}*/
+
+/*#video_container {
+	width:100%;
+}*/
+
+main {
+	margin:200px auto;
+}
+
+p.col {
+	/*display:inline-block;*/
+	width:48%;
+	text-align:justify;
+/*	padding: 15px 3% 20px;*/
+	float:right;
+}
+
+p.col:nth-child(1){
+	float:left;
+}
+
+
+table {
+	margin:0 auto;
+}
+td.padd {
+	padding: 0 0 0 20px;
+}
+
+
+/* ----  galleri ---- */
+#stills{
+	margin: 50px 0 0 0;
+	box-sizing:border-box;
+}
+#stills::after{
+	content:"";
+	display:table;
+	clear:both;
+}
+#stills img{
+	width:100%;
+	height:auto;
+}
+#galleri{
+	width:52%;
+	float:left;
+	box-sizing:inherit;
+}
+#back{
+	width:24%;
+	float:left;
+	padding-left:16%;
+	box-sizing:inherit;
+	margin-top:30%;
+	cursor:pointer;
+}
+#next{
+	width:24%;
+	float:left;
+	padding-right:16%;
+	box-sizing:inherit;
+	margin-top:30%;
+	cursor:pointer;
+}
+
+
+/* ---- end galleri ---- */
+
+
+/* ---------------------- */
+
+
+
+
+footer {
+	height:300px;
+	width: 100%;
+	/*background: url(../img/footer_bg.png) no-repeat;*/
+
+}
+
+/*img#footerbaggrund {
+	position: absolute;
+	right: 0;
+	bottom: 100px;
+	z-index: -10;
+}
+*/
+footer div {
+	float:left;
+	margin:228px 0 0 70px;
+	width:38px;
+}
+
+footer h4 {
+	margin:230px 0 0 10px;
+	float: left;
+	color:#C7C7C7;
+	font-weight: 500;
+	font-size:30px;
+	
+}
+
+/*address {
+	background: #000;
+	height:100px;
+	position:absolute;
+	bottom:0;
+	z-index:-100;
+}*/
+
+
+address {
+	font-style: normal;
+	margin: 0 auto;
+	
+}
+
+@media screen and (max-width:600px){
+	aside{
+		display: none;
+	}
+	h1{
+		font-size:4em;
+	}
+	.content, #video, p.col, #plakat_container{
+		width:98%;
+		margin:2em auto;
+		padding-left:0;
+		padding-right:0;
+		float:none;
+	}
+	footer h4 {
+		font-size:1em;
+	}
+	footer div {
+		margin-left:20px;
+	}
+	#galleri{
+		width:70%;
+		float:left;
+		box-sizing:inherit;
+	}
+	#back{
+		width:15%;
+		float:left;
+		padding-left:0;
+		box-sizing:inherit;
+		margin-top:30%;
+		cursor:pointer;
+	}
+	#next{
+		width:15%;
+		float:left;
+		padding-right:0;
+		box-sizing:inherit;
+		margin-top:30%;
+		cursor:pointer;
+	}
+}

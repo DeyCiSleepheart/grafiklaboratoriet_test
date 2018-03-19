@@ -1,0 +1,311 @@
+
+<!doctype html>
+<!--<html lang="en">-->
+<html lang="da">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <!--sørger for at det størrelsen tager udgangspunkt fra hvilken device brugeren er på.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Grafiklaboratoriet - <!-- undertitel --></title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900,900i" rel="stylesheet">
+
+  <link rel="icon" href="../img/favicon.png">
+
+<link href="../css/main.css" rel="stylesheet" type="text/css">
+<script src="jquery-3.2.1.min.js"></script>
+	<!-- følgende skal indsættes for at INCLUDE funtionen virker -->
+	<script>
+window.onload=function(){function a(a,b){var c=/^(?:file):/,d=new XMLHttpRequest,e=0;d.onreadystatechange=function(){4==d.readyState&&(e=d.status),c.test(location.href)&&d.responseText&&(e=200),4==d.readyState&&200==e&&(a.outerHTML=d.responseText)};try{d.open("GET",b,!0),d.send()}catch(f){}}var b,c=document.getElementsByTagName("*");for(b in c)c[b].hasAttribute&&c[b].hasAttribute("data-include")&&a(c[b],c[b].getAttribute("data-include"))};
+	</script>
+<!--
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>-->
+<script src="../prism.js"></script>
+<link rel="stylesheet" href="../css/prism.css">
+	</head>
+
+<body>
+
+<!--
+
+
+Den her funktion skulle fingere en hover effekt ved tlf størrelse
+
+<script>
+$(document).ready(function() {
+    $('.hover').bind('touchstart touchend', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('hover_effect');
+    });
+});
+
+</script>-->
+
+
+	<header>
+
+		<div id="header_wrapper">
+			<div id="logo_tekst">
+				<a href="../index.html">
+					<h2><span class="red">grafik</span>laboratoriet<span class="grey">.dk</span></h2>
+				</a>
+			</div>
+
+			<div id="bm_ognav_container">
+				<div id="burgermenu_container">
+					<img src="../img/svg/burgermenu.svg" alt="burgermenu ikon" height="25">
+				 </div>
+				<nav>
+					<ul>
+						<li><a href="zoya_portfolio.html">Zoya's portfolio</a></li>
+						<li><a href="morten_portfolio.html">Morten's portfolio</a></li>
+						<li class="undermenu_parent"><a href="bibliotek.html">Bibliotek</a>
+							<ul class="undermenu">
+								<li><a href="smaa_bidder.html">Småbidder</a></li>
+								<li><a href="anbefalinger.html">Anbefalinger</a></li>
+								<li><a href="grrlab_blog.html" class="current">Grrlab (blog)</a></li>
+
+							</ul>
+
+
+						</li>
+
+					</ul>
+				</nav>
+		   </div>
+		</div>
+    </header>
+
+
+
+	<!--SKIFT class for en anden farve baggrund-->
+    <main class="bg_orange">
+			<div id="main_content">
+				<h1>Der er endnu ikke noget indhold på denne side!</h1>
+
+
+				<h3>Det er en placeholder side som der kan indsættes indhold på. De er lavet så strukturen og siteflowet er på plads. Alle links virker forhåbentlig.</h3>
+			</div>
+
+	</main>
+
+		<section>
+			<div id="container">
+
+
+
+
+	<!--<pre>
+	<code class="language-css">main {
+	margin:49px;
+	}
+	#goget {
+	width:1000000px;}</code></pre>
+										-->
+
+				<div id="article_wrap"><!--<p>Det er meningen at man skal gå til artiklen, når man trykker på teaseren.</p>-->
+
+					<article>
+
+							<div data-include="blogposts/git_workflow.html" class="text"></div>
+						
+					</article>
+
+				<article>
+					<!--<a href="#" class="blogtag" onclick="myFunction()">-->
+						<div data-include="blogposts/hundrede_faerdigheder.html" class="text"></div>
+					<!--</a>-->
+				</article>
+
+
+				<article>
+						<div data-include="blogposts/daglig_rutine.html" class="text"></div>
+				</article>
+
+				<!-- forsøg på includes uden php -->
+
+				<!-- forsøg nr 1 -->
+				<article>
+					<object type="text/html" data="blogposts/test.html"></object>
+				</article>
+				<!-- forsøg nr 2 -->
+				<article class="test_2">
+					<div data-include="blogposts/test_2.html"></div>
+				</article>
+
+				</div> <!-- article_wrap -->
+
+				<!-- Her følger en INCLUDE javascript-løsning inspireret fra
+
+https://stackoverflow.com/questions/35501515/switching-between-two-div-elements-using-javascript
+
+				Den er omstændig, men den virker indtilvidere MEN IKKE I CHROME - 21 02 2018 Morten-->
+
+
+				<script>
+function get_hundrede() {
+  //  document.getElementById("article_wrap").innerHTML = "kalder kalder verden, kom ind verden, hvorfor virker du ikke som jeg gerne vil have dig til?"; // har kun tekst ikke nogen a tags eller data-includes argh!
+	document.getElementById("article_wrap").style.display="none";
+	document.getElementById("hundrede").style.display="block";
+	//document.getElementById("daglig_rutine").style.display="block"; //virker ikke skal have en form for selector
+
+}
+				</script>
+				<!--denne div id="hundrede" er usynlig til at starte med men dukker så op når man trykker på det element der har en macthende data-include (i det her tilfælde: data-include="blogposts/hundrede_faerdigheder.html"). Af en eller anden grund kan man ikke gøre det på selve den div hvor der er data-include på. Men man kan gøre det på en div niveauet over!! spørgsmålet er så hvordan får man koden til at virke ved flere blogposts?
+					-->
+				<div id="hundrede" style="display: none">
+					<div data-include="blogposts/hundrede_faerdigheder.html" class="text"></div>
+				</div>
+
+				<!-- Det virker ikke med bare at kaste en ekstra chunk af kode ind!!! Hvad med en ny funktion? shit det begynder at blive omstændigt!
+				-->
+
+<script>
+function get_daglig_rutine() {
+  //  document.getElementById("article_wrap").innerHTML = "kalder kalder verden, kom ind verden, hvorfor virker du ikke som jeg gerne vil have dig til?";
+	document.getElementById("article_wrap").style.display="none";
+	document.getElementById("daglig_rutine").style.display="block";
+	//document.getElementById("daglig_rutine").style.display="block"; //virker ikke skal have en form for selector
+}
+				</script>
+
+				<div id="daglig_rutine" style="display: none">
+
+					<div data-include="blogposts/daglig_rutine.html" class="text"></div>
+
+
+				</div>
+<script>
+function include_test_2() {
+
+	document.getElementById("article_wrap").style.display="none";
+	document.getElementById("include_test_2").style.display="block";
+
+}
+				</script>
+
+				<div id="include_test_2" style="display: none">
+
+					<div data-include="blogposts/test_2.html" class="text"></div>
+
+
+				</div>
+
+				<script>
+				function git_workflow() {
+					//  document.getElementById("article_wrap").innerHTML = "kalder kalder verden, kom ind verden, hvorfor virker du ikke som jeg gerne vil have dig til?";
+					document.getElementById("article_wrap").style.display="none";
+					document.getElementById("git_workflow").style.display="block";
+					//document.getElementById("daglig_rutine").style.display="block"; //virker ikke skal have en form for selector
+				}
+								</script>
+
+								<div id="git_workflow" style="display: none">
+
+									<div data-include="blogposts/git_workflow.html" class="text"></div>
+
+
+								</div>
+
+<!--
+Her slutter INCLUDE javascript-løsning
+
+Det virker MEN KUN I FIREFOX og der er et problem med at når man trykker på tilbage så går den ikke tilbage til start hey vent jeg har løsningen href #? pis nej ikke så nemt, måske skal der laves en knap hvis man vil uden om database, men spørgsmålet er om det er holdbart i længden når der kommer mange indlæg.
+
+-->
+
+
+
+
+			<!--   <article>
+
+				<h2>Overskrift der beskriver blog-artiklens tema og relevans</h2>
+				<h3>Her følger der en kort opsummering eller yderligere beskrivelse på det anvendelige og let forståelige indhold, der skrives om i blog-artiklen.</h3>
+            </article>
+
+			<article>
+
+				<h2>Overskrift der beskriver blog-artiklens tema og relevans</h2>
+				<h3>Her følger der en kort opsummering eller yderligere beskrivelse på det anvendelige og let forståelige indhold, der skrives om i blog-artiklen.</h3>
+            </article>
+
+			<article>
+
+				<h2>Overskrift der beskriver blog-artiklens tema og relevans</h2>
+				<h3>Her følger der en kort opsummering eller yderligere beskrivelse på det anvendelige og let forståelige indhold, der skrives om i blog-artiklen.</h3>
+            </article>
+			<article>
+
+				<h2>Overskrift der beskriver blog-artiklens tema og relevans</h2>
+				<h3>Her følger der en kort opsummering eller yderligere beskrivelse på det anvendelige og let forståelige indhold, der skrives om i blog-artiklen.</h3>
+            </article>
+			<article>
+
+				<h2>Overskrift der beskriver blog-artiklens tema og relevans</h2>
+				<h3>Her følger der en kort opsummering eller yderligere beskrivelse på det anvendelige og let forståelige indhold, der skrives om i blog-artiklen.</h3>
+            </article>	-->
+
+
+     	</div>
+	</section>
+
+
+	<footer>
+
+		<div id="footer_wrapper">
+			<div class="footer_logo">
+				<img src="../img/svg/grafiklaboratoriet_logo.svg" alt="sidens logo">
+			</div>
+
+			<div id="tekst_om_os">
+				<h3><span class="teal">Zoya</span> <span class="rose">Noor</span></h3>
+
+				<p>Tekst der siger noget om hvem jeg er, hvad jeg kan og hvad mine interesser er. <a href="#">Skriv til mig</a></p>
+
+
+				<h3><span class="rose">Morten</span> <span class="teal">Dalsgaard</span></h3>
+				<p>Jeg er på vej til at blive mediegrafiker, frontend web-udvikler/designer. Udover at dygtiggøre mig og løse grafiske problemstillinger, elsker jeg, at lave mad og at danse med hulahopring og at hænge ud og bygge ting med min familie. <a href="#">Skriv til mig</a></p>
+			</div>
+			<div id="samarbejsprojekter">
+				<div class="contain">
+				<h3>Samarbejdsprojekter</h3>
+
+				<p>Tjek vores fælles projekt ud. Vi skulle lave et tværfagligt projekt, hvor vi skulle lancere en film på en singlepage. Filmen skulle handle om et magisk fiskeblink og AD efterlyste et minimalistisk udtryk.</p>
+
+
+				<p>Siden endte med at se således ud:</p>
+					</div>
+
+
+<a href="http://filmensomikkeerprojekt.grafiklaboratoriet.dk/" class="website_link" target="_blank"><div id="imangelpaabedreloesning"></div></a>
+				<div class="tele_website_container">
+					<div class="website_container">
+
+						<div class="website">
+
+						</div>
+
+					</div>
+
+						<div class="teleikon">
+
+						</div>
+
+					</div>
+				</div>
+
+
+			<address>
+			</address>
+    	</div>
+    </footer>
+
+</body>
+
+</html>

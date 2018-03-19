@@ -1,0 +1,65 @@
+<!doctype html>
+<!--<html lang="en">-->
+<html lang="da">
+<!-- OBS hvis der laves ændringer i html skal det ændres i alle undersiderne, f.eks. links, med tiden kunne vi lave en php include eller en anden løsning... måske kunne begge dele laves så vi kan se hvad der er det smarteste -->
+<head>
+	
+  <meta charset="utf-8">
+  
+  <!--sørger for at det størrelsen tager udgangspunkt fra hvilken device brugeren er på.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <title>Grafiklaboratoriet blogpost include forsøg 2</title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900,900i" rel="stylesheet"> 
+		
+  <link rel="icon" href="img/favicon.png">
+		
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<script src="jquery-3.2.1.min.js"></script>
+	<script src="../../prism.js"></script> 
+<link rel="stylesheet" href="../../css/prism.css">
+
+	
+	</head>
+
+<body>
+<a href="#" class="blogtag" onclick="include_test_2()">
+<h2>Forsøg nummer 2 (:</h2>
+<p>Dette forsøg er med data-include</p>
+
+	<p><a href="https://github.com/LexmarkWeb/csi.js/blob/master/README.md">fra denne side på github</a></p>
+	<p>virker med css og link</p>
+	<p>men virker ikke i chrome!!</p>
+	<p>Jeg forstår ikke hvad det er der skal til for at få det til at virke i chrome, men hvis jeg kan få det til at virke er det måske vores løsning</p>
+	
+	<p>Desuden er der det problem at jeg gerne vil have at man skal kunne trykke på teaseren og så skal man komme hen på selve indlægget. Men hvordan kommer jeg hen på en side, der beholder html siden som en ramme men indsætter blogindlægget så det kan læses i sin fulde længde???? Det må jeg eksperimentere lidt med, jeg har en idé om at det kan lade sig gøre  
+	</p>	
+	
+					
+	<pre>
+	<code class="language-js">
+<script>window.onload=function(){function a(a,b){var c=/^(?:file):/,d=new
+XMLHttpRequest,e=0;d.onreadystatechange=function(){4==d.readyState&&
+(e=d.status),c.test(location.href)&&d.responseText&&(e=200),4==d.readyState&&200==e&&
+(a.outerHTML=d.responseText)};try{d.open("GET",b,!0),d.send()}catch(f){}}var
+b,c=document.getElementsByTagName("*");for(b in c)c[b].hasAttribute&&c[b].hasAttribute("data-
+include")&&a(c[b],c[b].getAttribute("data-include"))};</script>	</code>
+	</pre>
+	
+</a>
+	
+</body>
+<!-- *** for at det kan virke har jeg skulle indsætte følgende kode i head ***
+<script>
+window.onload=function(){function a(a,b){var c=/^(?:file):/,d=new XMLHttpRequest,e=0;d.onreadystatechange=function(){4==d.readyState&&(e=d.status),c.test(location.href)&&d.responseText&&(e=200),4==d.readyState&&200==e&&(a.outerHTML=d.responseText)};try{d.open("GET",b,!0),d.send()}catch(f){}}var b,c=document.getElementsByTagName("*");for(b in c)c[b].hasAttribute&&c[b].hasAttribute("data-include")&&a(c[b],c[b].getAttribute("data-include"))};	
+	</script>	
+
+og så kan man skrive 
+
+<div data-include="blogposts/test_2.html"></div>  der hvor man gerne vil have teksten til at stå, virker med css
+
+løsningen på 
+
+-->
